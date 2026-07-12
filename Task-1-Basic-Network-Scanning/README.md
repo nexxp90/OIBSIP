@@ -10,7 +10,7 @@ The goal of this task is to perform basic network reconnaissance using **Nmap** 
 
 * Kali Linux (VirtualBox)
 * Nmap
-* Linux Terminal
+  
 
 ---
 
@@ -37,7 +37,7 @@ Network scanning helps administrators and security professionals:
 ### 1. Basic Scan
 
 ```bash
-nmap <Target-IP>
+nmap 127.0.0.1
 ```
 
 Discovers active hosts and open TCP ports.
@@ -47,7 +47,7 @@ Discovers active hosts and open TCP ports.
 ### 2. Service Version Detection
 
 ```bash
-nmap -sV <Target-IP>
+nmap -sV 127.0.0.1
 ```
 
 Identifies the version of services running on open ports.
@@ -57,7 +57,7 @@ Identifies the version of services running on open ports.
 ### 3. Operating System Detection
 
 ```bash
-sudo nmap -O <Target-IP>
+sudo nmap -O 127.0.0.1
 ```
 
 Attempts to detect the target operating system.
@@ -79,7 +79,7 @@ Attempts to detect the target operating system.
 ## 📂 Project Structure
 
 ```text
-Task-1-Basic-Network-Scanning/
+Task-1-Basic Network Scanning with Nmap/
 │
 ├── README.md
 ├── nmap_scan_results.txt
@@ -95,7 +95,6 @@ Task-1-Basic-Network-Scanning/
 
 Include screenshots of:
 
-* Nmap installation
 * Basic scan output
 * Service version scan
 * OS detection scan
