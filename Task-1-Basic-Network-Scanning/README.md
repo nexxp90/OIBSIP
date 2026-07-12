@@ -29,27 +29,6 @@ Network scanning helps administrators and security professionals:
 * Detect potential security risks
 * Improve the overall security posture of a system
 
----
-
-## ⚙️ Installation
-
-Update package list:
-
-```bash
-sudo apt update
-```
-
-Install Nmap:
-
-```bash
-sudo apt install nmap
-```
-
-Verify installation:
-
-```bash
-nmap --version
-```
 
 ---
 
