@@ -1,1 +1,26 @@
+#!/bin/bash
+
+# Task 2: Basic Firewall Configuration with UFW
+# This script enables UFW, allows SSH, denies HTTP,
+# and displays the firewall status.
+
+echo "Starting UFW firewall configuration..."
+
+# Enable UFW
+sudo ufw enable
+
+# Set default firewall policies
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# Allow SSH traffic (Port 22)
+sudo ufw allow ssh
+
+# Deny HTTP traffic (Port 80)
+sudo ufw deny http
+
+# Display firewall status
+sudo ufw status verbose
+
+echo "UFW firewall configuration completed successfully."
 
