@@ -1,87 +1,133 @@
-Task 2 - Basic Firewall Configuration using UFW
-📌 Objective
-The objective of this task is to configure a basic firewall using UFW (Uncomplicated Firewall) to manage network traffic and improve the security of a Linux system.
+# 🔥 Task 2 - Basic Firewall Configuration using UFW
 
+## 📌 Objective
 
-🛠️ Tools Used
-Kali Linux / Ubuntu
-UFW (Uncomplicated Firewall)
-Linux Terminal
+The objective of this task is to configure a basic firewall using **UFW (Uncomplicated Firewall)** to control network traffic, secure a Linux system, and understand the importance of firewall rules in protecting a machine from unauthorized access.
 
-📖 What is UFW?
+---
 
-UFW (Uncomplicated Firewall) is a command-line firewall tool that simplifies the management of iptables. It allows users to easily allow or block incoming and outgoing network traffic.
+## 🛠️ Tools Used
 
-❓ Why Firewall Configuration Matters
+* Kali Linux / Ubuntu
+* UFW (Uncomplicated Firewall)
+* Linux Terminal
 
-A firewall helps protect a system by:
+---
 
-Blocking unauthorized network access
-Allowing only trusted connections
-Reducing the attack surface
-Improving overall system security
+## 📖 What is UFW?
 
+**UFW (Uncomplicated Firewall)** is a user-friendly command-line firewall utility that simplifies the management of **iptables**. It allows users to create and manage firewall rules without dealing with complex configurations.
 
-🔧 Firewall Installation
+---
 
-UFW was installed using the following command:
+## ❓ Why Firewall Configuration Matters?
 
+Firewalls are the first line of defense for a system. They help to:
+
+* Block unauthorized network access
+* Allow only trusted connections
+* Reduce the attack surface
+* Protect services from unwanted traffic
+* Improve overall system security
+
+---
+
+## 🔧 Installation & Setup
+
+Update the package list:
+
+```bash
+sudo apt update
+```
+
+Install UFW:
+
+```bash
 sudo apt install ufw -y
+```
 
-Enabling the Firewall
+Check the firewall status:
 
-The firewall was enabled to start enforcing rules:
+```bash
+sudo ufw status
+```
 
+Enable the firewall:
+
+```bash
 sudo ufw enable
+```
 
+### Default Policies
 
-Default policies applied:
+* Deny all incoming connections
+* Allow all outgoing connections
 
-Deny all incoming connections
-Allow all outgoing connections
+---
 
+## 🔐 Firewall Rules
 
-🔐 Configuring Firewall Rules
-Allow SSH (Port 22)
+### Allow SSH (Port 22)
 
-To maintain remote access, SSH traffic was allowed:
-
+```bash
 sudo ufw allow ssh
+```
 
-Deny HTTP (Port 80)
+### Deny HTTP (Port 80)
 
-HTTP traffic was blocked to demonstrate firewall filtering:
-
+```bash
 sudo ufw deny http
+```
 
-📊 Firewall Status Verification
+### Allow HTTPS (Port 443)
 
-Firewall status and rules were verified using:
+```bash
+sudo ufw allow https
+```
 
+---
+
+## 📊 Verify Firewall Status
+
+Display all active firewall rules:
+
+```bash
 sudo ufw status verbose
+```
+
+Expected Result:
+
+* Firewall is active
+* SSH traffic is allowed
+* HTTP traffic is denied
+* HTTPS traffic is allowed
+* Default policies are applied successfully
 
 
-This confirmed:
-Firewall is active
+---
 
-SSH allowed
+## 📸 Screenshots
 
-HTTP denied
+The following screenshots are included in the **screenshots** folder:
 
-Default policies enforced
+* UFW installation
+* Firewall enabled successfully
+* Firewall rule configuration
+* UFW status verification
+
+---
 
 
-📷 Screenshots
-All relevant screenshots showing firewall installation, rule configuration, and status verification are included in the screenshots directory.
+## ⚠️ Ethical Use
 
+This task was completed on a personal virtual machine for educational purposes only. Firewall configurations should only be performed on systems that you own or have explicit permission to manage.
 
-⚠️ Ethical Use
+---
 
-This configuration was performed on a personal virtual machine for educational purposes only. Do not modify firewall settings on production systems without proper authorization.
+## 📚 Learning Outcomes
 
-📚 Learning Outcome
-Installed and configured UFW firewall
-Managed network ports (allow/deny rules)
-Verified firewall status
-Understood basic network security concepts
-Documented security configuration professionally
+* Installed and configured UFW
+* Applied firewall rules to allow and deny traffic
+* Verified firewall configuration
+* Learned the importance of firewall security
+* Documented the complete configuration process
